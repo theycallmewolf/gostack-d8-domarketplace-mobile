@@ -36,8 +36,6 @@ const Dashboard: React.FC = () => {
   useEffect(() => {
     async function loadProducts(): Promise<void> {
       const { data } = await api.get('/products');
-      // eslint-disable-next-line no-console
-      console.log(data);
       setProducts(data);
     }
 
